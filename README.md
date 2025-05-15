@@ -49,11 +49,6 @@ A full-stack food delivery application with an intelligent chatbot interface tha
 - 📱 Responsive UI
 
 ---
-# 🍽️ ChatNChow
-
-A full-stack food delivery support system with a smart chat interface for order tracking, menu browsing, and real-time support.
-
----
 
 ## 🧽 Project Structure
 
