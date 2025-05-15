@@ -1,230 +1,173 @@
-ChatNChow 🍔💬
-A modern full-stack food delivery application with an intelligent chatbot interface that helps users place orders, track deliveries, and manage food orders seamlessly.
+# 🍔 ChatNChow 💬  
+*A Modern AI-Powered Food Delivery Chatbot System*
 
-Features
-Order Management
-Place new orders via conversational interface
+A full-stack food delivery application with an intelligent chatbot interface that allows users to place orders, track deliveries, and manage food orders in real-time with ease.
 
-View restaurant menus with prices and descriptions
+---
 
-Real-time order tracking
+## 🚀 Features
 
-Cancel orders with automatic refund processing
+### 🛒 Order Management
+- 🤖 Place new orders via conversational interface
+- 📖 View restaurant menus with prices & descriptions
+- 📦 Real-time order tracking
+- ❌ Cancel orders with automatic refunds
+- 📝 Add special delivery instructions & preferences
 
-Add special instructions and delivery preferences
+### 💳 Payment System
+- 💵 Online payment via QR code
+- 💰 Cash on Delivery (COD)
+- 🔐 Secure transaction handling
+- 🔄 Auto-refund processing for cancelled orders
+- 📊 Payment status updates
+- 
 
-Payment System
-Multiple payment methods:
+### 🌐 User Experience
+- 💬 Natural language chat interface
+- 🕒 View order history
+- 🛑 Easy cancellations
+- 🙋‍♀️ Connect with live agents if needed
+- 📱 Fully responsive design for mobile/tablets
 
-Online payment with QR code
+---
 
-Cash on Delivery (COD)
+## 🛠️ Tech Stack
 
-Secure payment processing
+### 🔙 Backend
+- ⚡ FastAPI (Python)
+- 🗃️ SQLAlchemy ORM
+- 🐘 PostgreSQL Database
+- 🔳 QR Code Generation
+- 🔁 RESTful API Architecture
 
-Automatic refunds for cancelled orders
+### 🔜 Frontend
+- ⚛️ React.js
+- 🎨 Material-UI Components
+- 🔄 Axios for API calls
+- 🧭 React Router
+- 🧠 Real-time Chat Interface
+- 📱 Responsive UI
 
-Payment status tracking
+---
 
-Restaurant Features
-Browse restaurants by cuisine
-
-View detailed menus and reviews
-
-See restaurant ratings
-
-Avail special offers and promotions
-
-User Experience
-Natural language chat interface
-
-View order history
-
-Real-time tracking
-
-Easy cancellation
-
-Connect with live agents when needed
-
-Tech Stack
-Backend
-FastAPI (Python)
-
-SQLAlchemy ORM
-
-PostgreSQL database
-
-QR code generation
-
-RESTful API architecture
-
-Frontend
-React.js
-
-Material-UI components
-
-Axios for API calls
-
-React Router for navigation
-
-Real-time chat interface
-
-Responsive design
-
-Project Structure
-bash
-Copy
-Edit
+## 🧭 Project Structure
 ChatNChow/
-├── BE/                 # Backend (FastAPI)
-│   ├── app/
-│   │   ├── models/     # Database models
-│   │   ├── schemas/    # Pydantic schemas
-│   │   ├── crud.py     # CRUD operations
-│   │   └── main.py     # FastAPI application
-│   └── requirements.txt
-└── FE/                 # Frontend (React)
-    ├── src/
-    │   ├── components/
-    │   ├── pages/
-    │   └── App.js
-    └── package.json
-Setup Instructions
-Clone the Repository
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/chatnchow.git
-cd chatnchow
-Backend Setup
-bash
-Copy
-Edit
+├── BE/ # Backend (FastAPI)
+│ ├── app/
+│ │ ├── models/ # DB models
+│ │ ├── schemas/ # Pydantic schemas
+│ │ ├── crud.py # CRUD logic
+│ │ └── main.py # FastAPI app
+│ └── requirements.txt
+└── FE/ # Frontend (React)
+├── src/
+│ ├── components/
+│ ├── pages/
+│ └── App.js
+└── package.json
+
+---
+
+## ⚙️ Backend Setup
+
+```bash
 cd BE
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
-Set up environment variables in a .env file:
 
-bash
-Copy
-Edit
+Create a .env file:
 DATABASE_URL=postgresql://user:password@localhost:5432/chatnchow
-Run the server:
-
-bash
-Copy
-Edit
+Run the backend server:
 uvicorn app.main:app --reload
-Frontend Setup
-bash
-Copy
-Edit
+
+---
+🎨 Frontend Setup
+# Navigate to the frontend directory
 cd FE
+
+# Install all dependencies
 npm install
-Create a .env file in the FE directory:
 
-ini
-Copy
-Edit
+📁 Create a .env file inside the FE/ directory:
 REACT_APP_API_URL=http://localhost:8000
-Start the frontend server:
-
-bash
-Copy
-Edit
+🚀 Start the frontend development server:
 npm start
-API Endpoints
-Chat Interface
-POST /chat – Main chatbot endpoint
 
-GET /get_qr_code/{order_id} – Generate payment QR code
+📡 API Endpoints
+💬 Chat Interface
+POST /chat – Handle chat-based order queries
 
-Order Management
+GET /get_qr_code/{order_id} – Generate QR code for payment
+
+📦 Order Management
 POST /cancel_order/{order_id} – Cancel an order
 
 GET /orders/{order_id}/status – Check order status
 
-Restaurant
+🍴 Restaurants
 GET /restaurants – List all restaurants
 
-GET /restaurants/{id}/menu – Get a restaurant’s menu
+GET /restaurants/{id}/menu – Get restaurant’s menu
 
-Database Schema
+🗃️ Database Schema
 Main Tables:
 
-Users
+🧑 Users
 
-Orders
+🧾 Orders
 
-OrderItems
+🍱 OrderItems
 
-Payments
+💸 Payments
 
-Restaurants
+🍽️ Restaurants
 
-MenuItems
+🧆 MenuItems
 
-Deliveries
+🛵 Deliveries
 
-Deployment
-Backend (Render)
-Create a new Web Service on Render
 
-Connect your GitHub repository
+📚 API Documentation
+🔍 Swagger UI – Interactive API docs
 
-Set build command: pip install -r requirements.txt
+📘 ReDoc – Clean API reference
 
-Set start command: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+🤝 Contributing
+We welcome contributions! Here's how:
 
-Add environment variable:
+🍴 Fork the repository
 
-DATABASE_URL: Your PostgreSQL database URL
+🌿 Create a feature branch:
+git checkout -b feature/YourFeature
+💾 Commit your changes:
+git commit -m "Add: Your feature"
 
-Frontend (Vercel)
-Create a new project on Vercel
+🚀 Push your branch:
+git push origin feature/YourFeature
+📩 Open a Pull Request
 
-Connect your GitHub repository
 
-Set build command: npm run build
 
-Add environment variable:
+📄 License
+This project is licensed under the MIT License.
+See the LICENSE file for details.
 
-REACT_APP_API_URL: Your Render backend URL
 
-API Documentation
-Once the backend is running, visit:
+---
 
-Swagger UI: http://localhost:8000/docs
 
-ReDoc: http://localhost:8000/redoc
 
-Contributing
-Fork the repository
+🙏 Acknowledgments
+⚡ FastAPI
 
-Create your feature branch (git checkout -b feature/AmazingFeature)
+🧠 SQLAlchemy
 
-Commit your changes (git commit -m 'Add some AmazingFeature')
+⚛️ React
 
-Push to the branch (git push origin feature/AmazingFeature)
+🎨 Material-UI
 
-Open a Pull Request
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
-Support
-Open an issue on GitHub
 
-Use the in-app chat to connect with a real agent
 
-Contact the team: support@chatnchow.com
-
-Acknowledgments
-FastAPI Documentation
-
-SQLAlchemy Docs
-
-React.js
-
-Material-UI
