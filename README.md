@@ -55,18 +55,18 @@ A full-stack food delivery application with an intelligent chatbot interface tha
 ```
 ChatNChow/
 💁🏼 BE/                  # Backend (FastAPI)
-💁🏼 ├\2500 app/
-💁🏼 │   ├\2500 models/      # DB models
-💁🏼 │   ├\2500 schemas/     # Pydantic schemas
-💁🏼 │   ├\2500 crud.py      # CRUD logic
-💁🏼 │   └\2500 main.py      # FastAPI app entry point
-💁🏼 └\2500 requirements.txt
+💁🏼 ├\ app/
+💁🏼 │   ├\ models/      # DB models
+💁🏼 │   ├\ schemas/     # Pydantic schemas
+💁🏼 │   ├\ crud.py      # CRUD logic
+💁🏼 │   └\ main.py      # FastAPI app entry point
+💁🏼 └\ requirements.txt
 💁🏼 FE/                  # Frontend (React)
-    ├\2500 src/
-    │   ├\2500 components/
-    │   ├\2500 pages/
-    │   └\2500 App.js
-    └\2500 package.json
+    ├\ src/
+    │   ├\components/
+    │   ├\ pages/
+    │   └\ App.js
+    └\package.json
 ```
 
 ---
